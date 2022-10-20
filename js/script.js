@@ -29,5 +29,12 @@ let teamArray = [
         roll: "Graphic Designer",
         img: "barbara-ramos-graphic-designer.jpg"
     }
-
 ];
+
+for (let i = 0; i < teamArray.length; i++) {
+    const person = teamArray[i];
+    console.log(person.name);
+    console.log(person.roll);
+    console.log(person.img);
+    console.log("------------");
+}
