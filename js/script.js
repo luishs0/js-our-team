@@ -41,7 +41,36 @@ for (let i = 0; i < teamArray.length; i++) {
     console.log("------------");
 };
 
-for (let j = 0; j < teamArray.length; j++) {
-    const personString = teamArray[j];
-    containerElement.innerHTML += `<div class="mt"> ${personString.name},  ${personString.roll},  <img src="img/${personString.img}" alt=""> </div>`
+// for (let j = 0; j < teamArray.length; j++) {
+//     const personString = teamArray[j];
+//     containerElement.innerHTML += `<div class="mt"> ${personString.name},  ${personString.roll},  <img src="img/${personString.img}" alt=""> </div>`
+// }
+
+for (let k = 0; k < teamArray.length; k++) {
+    const personCards = teamArray[k];
+
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
+
+    const cardImg = document.createElement("div");
+    cardImg.classList.add("card-img");
+    cardDiv.append(cardImg);
+
+    const cardTxt = document.createElement("div");
+    cardTxt.classList.add("card-txt");
+    cardDiv.append(cardTxt);
+
+    const cardTxtName = document.createElement("div");
+    cardTxtName.classList.add("card-txt-name");
+    cardTxt.append(cardTxtName);
+
+    const cardTxtRoll = document.createElement("div");
+    cardTxtRoll.classList.add("card-txt-roll");
+    cardTxt.append(cardTxtRoll);
+
+    containerElement.append(cardDiv);
+
+    cardImg.innerHTML = `<img src="img/${personCards.img}" alt="">`;
+    cardTxtName.innerHTML = `${personCards.name}`;
+    cardTxtRoll.innerHTML = `${personCards.roll}`;
 }
