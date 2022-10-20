@@ -31,10 +31,17 @@ let teamArray = [
     }
 ];
 
+const containerElement = document.querySelector(".container");
+
 for (let i = 0; i < teamArray.length; i++) {
     const person = teamArray[i];
     console.log(person.name);
     console.log(person.roll);
     console.log(person.img);
     console.log("------------");
+};
+
+for (let j = 0; j < teamArray.length; j++) {
+    const personString = teamArray[j];
+    containerElement.innerHTML += `<div class="mt"> ${personString.name},  ${personString.roll},  ${personString.img} </div>`
 }
