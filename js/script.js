@@ -7,7 +7,7 @@ let teamArray = [
     {
         name: "Angela Caroll",
         roll: "Chief Editor",
-        img: "wangela-caroll-chief-editor.jpg"
+        img: "angela-caroll-chief-editor.jpg"
     },
     {
         name: "Walter Gordon",
@@ -43,5 +43,5 @@ for (let i = 0; i < teamArray.length; i++) {
 
 for (let j = 0; j < teamArray.length; j++) {
     const personString = teamArray[j];
-    containerElement.innerHTML += `<div class="mt"> ${personString.name},  ${personString.roll},  ${personString.img} </div>`
+    containerElement.innerHTML += `<div class="mt"> ${personString.name},  ${personString.roll},  <img src="img/${personString.img}" alt=""> </div>`
 }
